@@ -1,5 +1,6 @@
 package com.example.monster_kid.cvrceofficial;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -115,8 +116,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            mTextMessage.setText("nav_camera");
+        if (id == R.id.grievance_id) {
+            mTextMessage.setText("grievance_id");
+            Intent intent = new Intent(getApplicationContext(),Grievance_form.class);
+            startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
             mTextMessage.setText("nav_gallery");
